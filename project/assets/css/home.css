@@ -1,0 +1,227 @@
+header {
+  background-color: #edeef3;
+  height: 90px;
+}
+header .row .logo-menu {
+  display: flex;
+}
+header .row .logo-menu div:first-child {
+  border-right: 1px solid #ccc;
+  text-align: center;
+}
+header .row .logo-menu div:nth-child(2) {
+  text-align: start;
+}
+header .row .logo-menu div:nth-child(2) i {
+  cursor: pointer;
+}
+header .row .search {
+  display: flex;
+  height: 100%;
+}
+header .row .search input {
+  width: 250px;
+}
+header .row .pages ul {
+  display: flex;
+}
+header .row .pages ul li {
+  margin-left: 20px;
+  list-style: none;
+  position: relative;
+}
+header .row .pages ul li:hover ul {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 0;
+}
+header .row .pages ul li ul {
+  position: absolute;
+  content: "";
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  left: -70px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease 0.4s;
+  margin-top: 100px;
+  z-index: 1;
+}
+header .row .pages ul li ul li {
+  padding: 0;
+  height: 36px;
+}
+header .row .pages ul li ul li a {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  padding: 0 10px;
+  position: relative;
+  transition: all ease 0.4s;
+}
+header .row .pages ul li ul li a::after {
+  transition: all ease 0.4s;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: auto;
+  right: auto;
+  right: 0;
+  background-color: #2b4eff;
+}
+header .row .pages ul li ul li:hover a::after {
+  background-color: #2b4eff;
+  left: 0;
+  right: auto;
+  width: 100%;
+  color: #fff;
+}
+header .row .pages ul li a {
+  text-decoration: none;
+  color: #0e1133;
+}
+header .row .pages ul li a:hover {
+  color: #2b4eff;
+}
+header .row .pages ul li i {
+  font-size: 12px;
+}
+header .row .shbtn .search {
+  width: 280px;
+  height: 50px;
+  border: 2px solid #ddd;
+  padding: 5px;
+  background-color: #fff;
+}
+header .row .shbtn .search input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  flex-grow: 1;
+}
+header .row .shbtn .search .bucket {
+  height: 20px;
+  background-image: url(../icons/cart.svg);
+  width: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: #fff;
+  position: relative;
+}
+header .row .shbtn .search .bucket::after {
+  position: absolute;
+  content: "2";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #2b4eff;
+  color: #fff;
+  top: -10px;
+  right: -10px;
+  font-size: 11px;
+}
+header .row .shbtn .search .bucket:hover::after {
+  background-color: #0e1133;
+}
+header .row .shbtn button {
+  width: 120px;
+}
+header .row .shbtn button:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+#title {
+  background-color: #edeef3;
+  position: relative;
+}
+#title img:first-child {
+  position: absolute;
+  top: 400px;
+}
+#title img:nth-child(2) {
+  position: absolute;
+  left: 50px;
+  top: 120px;
+}
+#title img:nth-child(3) {
+  position: absolute;
+  right: 0px;
+  top: 470px;
+}
+#title .container {
+  height: 120vh;
+  position: relative;
+}
+#title .container .first {
+  position: absolute;
+  top: 170px;
+  right: 12%;
+}
+#title .container .second {
+  position: absolute;
+  top: 420px;
+  left: 854px;
+}
+#title .container .third {
+  position: absolute;
+  right: 635px;
+  bottom: 50px;
+  animation: hero-dot-1 5s linear 0s infinite alternate;
+  z-index: 0;
+}
+#title .container .row div:first-child {
+  position: absolute;
+  top: 270px;
+  left: 100px;
+}
+#title .container .row div:first-child h1 {
+  font-weight: 300;
+  display: block;
+}
+#title .container .row div:first-child h3 {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 1;
+}
+#title .container .row div:first-child p {
+  font-size: 22px;
+  color: #0e1133;
+}
+#title .container .row div:first-child button {
+  height: 50px;
+}
+#title .container .row div:first-child button:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+#title .container .row div:nth-child(2) img {
+  max-width: 400px;
+  max-height: 460px;
+  border-radius: 40px 4px;
+  box-shadow: 0 30px 60px rgba(1, 11, 60, 0.1411764706);
+  position: absolute;
+  top: 250px;
+  right: 275px;
+}
+#title .container .row div:nth-child(3) img {
+  max-width: 200px;
+  max-height: 240px;
+  border-radius: 4px 40px;
+  box-shadow: 0 30px 60px rgba(1, 11, 60, 0.1411764706);
+  position: absolute;
+  right: 42px;
+  top: 300px;
+}
+
+#courses {
+  height: 120vh;
+}
+
+@media (max-width: 576px) {
+  .icon {
+    display: none;
+  }
+}/*# sourceMappingURL=home.css.map */
