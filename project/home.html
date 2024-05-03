@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="">
         <div class="row col-12">
             <div class="col-4 logo-menu ">
                 <div class="col-6 mt-4">
@@ -19,7 +19,16 @@
                 <div class="col-6 mt-4">
                     <!-- <div class="icon"></div>
                     <span class="mx-5">Category</span> -->
-                    <i class="fa-solid fa-bars mt-2 mx-3"></i>Category
+                    <div class="dropdown">
+                        <i class="fa-solid fa-bars mt-2 mx-3"></i>Category
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="#">Cras justo odio</a></li>
+                            <li class="list-group-item"><a href="#">Cras justo odio</a></li>
+                            <li class="list-group-item"><a href="#">Cras justo odio</a></li>
+                            <li class="list-group-item"><a href="#">Cras justo odio</a></li>
+                            <li class="list-group-item"><a href="#">Cras justo odio</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="col-4 pages mt-4">
@@ -27,14 +36,23 @@
                     <li>
                         <a href="">Home<i class="fa-solid fa-chevron-down"></i></a>
                         <ul class="list-group">
-                            <li class="list-group-item"><a href="#" class="text-white">Cras justo odio</a></li>
+                            <li class="list-group-item"><a href="#">Cras justo odio</a></li>
                             <li class="list-group-item"><a href="#">Cras justo odio</a></li>
                             <li class="list-group-item"><a href="#">Cras justo odio</a></li>
                             <li class="list-group-item"><a href="#">Cras justo odio</a></li>
                             <li class="list-group-item"><a href="#">Cras justo odio</a></li>
                         </ul>
                     </li>
-                    <li><a href="">Courses<i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li>
+                        <a href="">Courses<i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="#">Cras justo odio</a></li>
+                            <li class="list-group-item"><a href="#">Cras justo odio</a></li>
+                            <li class="list-group-item"><a href="#">Cras justo odio</a></li>
+                            <li class="list-group-item"><a href="#">Cras justo odio</a></li>
+                            <li class="list-group-item"><a href="#">Cras justo odio</a></li>
+                        </ul>
+                    </li>
                     <li><a href="">Blog<i class="fa-solid fa-chevron-down"></i></a></li>
                     <li><a href="">Pages<i class="fa-solid fa-chevron-down"></i></a></li>
                     <li><a href="">Contact<i class="fa-solid fa-chevron-down"></i></a></li>
@@ -54,7 +72,7 @@
     <main>
         <section id="title">
             <img src="./assets/images/hero-1-circle-2.png" alt="" class="mt-5">
-            <img src="assets/images/hero-1-circle.png" alt="" class="mt-5">
+            <img src="assets/images/hero-1-circle.png" alt="" class="mt-5 circle">
             <img src="./assets/images/hero-1-dot-2.png" alt="">
             <div class="container">
                 <img src="./assets/images/hero-1-circle-4.png" alt="" class="first">
@@ -63,12 +81,16 @@
                 <div class="row">
                     <div class="col-5">
                         <h1>Access 2700+</h1>
-                        <h3><b>Online Tutorial From Top Instructor.</b></h3>
+                        <h3><b><span class="underline">Online</span> Tutorial From Top Instructor.</b></h3>
                         <p>Meet university,and cultural institutions, who'll share their experience.</p>
                         <button class="btn btn-primary">Views all course</button>
                     </div>
                     <div class="col-4">
                         <img src="./assets/images/hero-1.jpg" alt="">
+                        <div class="alert-msj">
+                            <p>Tomorrow is our</p>
+                            <h3> “When I Grow Up” Spirit Day!</h3>
+                        </div>
                     </div>
                     <div class="col-3">
                         <img src="./assets/images/hero-sm-1.jpg" alt="">
@@ -81,100 +103,111 @@
             <div class="row mt-5">
                 <div class="col-5 mx-3 ">
                     <h1>Explore</h1>
-                        <h1>Our Popular Courses</h1>
+                        <h1>Our <span>Popular</span> Courses</h1>
                 </div>
                 <div class="col-6">
-                   <span> View all Category<i class="fa-solid fa-arrow-right"></i></span>
+                    <div class="hover">
+
+                        <span> View all Category</span><i class="fa-solid fa-arrow-right"></i>
+                    </div>
                 </div>
             </div>
-            <div class="icons mt-5">
-                <div class="row">
-                    <div class="col-4">
-                       <div>
-                        <img src="./assets/icons/tablet.svg" alt="">
-                        <h4 class="mx-3">Data Science</h4>
-                        <p class="mt-4 mx-5">Data is Everythings</p>
-                       </div>
+            <div class="icons d-grid mt-5">
+                <div class="grid-item">
+                    <img src="./assets/icons/tablet.svg" alt="">
+                    <div>
+                        <h4>Data Science</h4>
+                        <p>Data is Everythings</p>
                     </div>
-                    <div class="col-4">
-                        <div>
-                         <img src="./assets/icons/house.svg" alt="">
-                         <h4 class="mx-3">Business</h4>
-                         <p class="mt-4 mx-5">Improve your business</p>
-                        </div>
-                     </div>
-                     <div class="col-4">
-                        <div>
-                         <img src="./assets/icons/paint.svg" alt="">
-                         <h4 class="mx-3">Art & Design</h4>
-                         <p class="mt-4 mx-5">Fun & Challenging</p>
-                        </div>
-                     </div>
                 </div>
-                <div class="row mt-5">
-                    <div class="col-4">
-                       <div>
-                        <img src="./assets/icons/discord.svg" alt="">
-                        <h4 class="mx-3">Lifestyle</h4>
-                        <p class="mt-4 mx-5">New Skills, New You</p>
-                       </div>
+                <div class="grid-item">
+                    <img src="./assets/icons/house.svg" alt="">
+                    <div>
+                        <h4 >Business</h4>
+                        <p>Improve your business</p>
                     </div>
-                    <div class="col-4">
-                        <div>
-                         <img src="./assets/icons/tablet.svg" alt="">
-                         <h4 class="mx-3">Marketing</h4>
-                         <p class="mt-4 mx-5">Improve your business</p>
-                        </div>
-                     </div>
-                     <div class="col-4">
-                        <div>
-                         <img src="./assets/icons/tablet.svg" alt="">
-                         <h4 class="mx-3">Finance</h4>
-                         <p class="mt-4 mx-5">Fun & Challenging</p>
-                        </div>
-                     </div>
                 </div>
-                <div class="row mt-5">
-                    <div class="col-4">
-                       <div>
-                        <img src="./assets/icons/tablet.svg" alt="">
-                        <h4 class="mx-3">Health & Fitness</h4>
-                        <p class="mt-4 mx-5">Invest to Your Body</p>
-                       </div>
+                <div class="grid-item">
+                    <img src="./assets/icons/paint.svg" alt="">
+                    <div>
+                        <h4>Art & Design</h4>
+                        <p>Fun & Challenging</p>
                     </div>
-                    <div class="col-4">
-                        <div>
-                         <img src="./assets/icons/tablet.svg" alt="">
-                         <h4 class="">Music</h4>
-                         <p class="mt-4 mx-5">Major or Minor</p>
-                        </div>
-                     </div>
-                     <div class="col-4">
-                        <div>
-                         <img src="./assets/icons/tablet.svg" alt="">
-                         <h4 class="mx-3">Academics</h4>
-                         <p class="mt-4 mx-5">High Education Level</p>
-                        </div>
-                     </div>
                 </div>
+                <div class="grid-item">
+                    <img src="./assets/icons/discord.svg" alt="">
+                    <div>
+                        <h4>Lifestyle</h4>
+                        <p>New Skills, New You</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="./assets/icons/tablet.svg" alt="">
+                    <div>
+                        <h4>Marketing</h4>
+                        <p>Improve your business</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="./assets/icons/tablet.svg" alt="">
+                    <div>
+                        <h4>Finance</h4>
+                        <p>Fun & Challenging</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="./assets/icons/tablet.svg" alt="">
+                    <div>
+                        <h4>Health & Fitness</h4>
+                        <p>Invest to Your Body</p>
+                    </div>
+
+                   
+                </div>
+                <div class="grid-item">
+                    <img src="./assets/icons/tablet.svg" alt="">
+                    <div>
+                        <h4 class="">Music</h4>
+                        <p>Major or Minor</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="./assets/icons/tablet.svg" alt="">
+                    <div>
+                        <h4>Academics</h4>
+                        <p>High Education Level</p>
+                    </div>
+                </div>
+                
             </div>
             <div class="img-icons mt-5">
-                <div class="row">
+                <div class="row mt-5">
                     <div class="col-6">
                         <div class="col-6">
                             <span>Free</span>
-                            <h3>Germany Foundation <br>
+                            <h5>Germany Foundation <br>
                                 Document
-                            </h3>
+                            </h5>
                             <button class="btn btn-primary">View Courses</button>
                         </div>
                         <div class="col-6">
                             <img src="assets/images/banner-img-1.png" alt="">
                         </div>
-
-                    </div>
-                    <div class="col-6">
                         
+                    </div>
+                    <div class="col-6 mx-3">
+                       
+                        <div class="col-6">
+                            <span>Free</span>
+                            <h5>Germany Foundation <br>
+                                Document
+                            </h5>
+                            <button class="btn btn-primary">View Courses</button>
+                        </div>
+                        <div class="col-6 mx-3">
+                            <img src="assets/images/banner-img-1.png" alt="">
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>

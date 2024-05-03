@@ -1,11 +1,24 @@
+body {
+  padding-top: 90px 0 0 0;
+}
+
 header {
   background-color: #edeef3;
   height: 90px;
+  position: fixed;
+  z-index: 1111;
+  width: 100%;
+  transition: all ease 0.3s;
+}
+header.scroll {
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0px 10px 20px 0px rgba(8, 0, 42, 0.08);
 }
 header .row .logo-menu {
   display: flex;
 }
-header .row .logo-menu div:first-child {
+header .row .logo-menu > div:first-child {
   border-right: 1px solid #ccc;
   text-align: center;
 }
@@ -14,6 +27,26 @@ header .row .logo-menu div:nth-child(2) {
 }
 header .row .logo-menu div:nth-child(2) i {
   cursor: pointer;
+}
+header .row .logo-menu div:nth-child(2) .dropdown {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 20px;
+}
+header .row .logo-menu div:nth-child(2) .dropdown ul {
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease 0.3s;
+  margin-top: 80px;
+}
+header .row .logo-menu div:nth-child(2) .dropdown:hover ul {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 20px;
 }
 header .row .search {
   display: flex;
@@ -25,20 +58,20 @@ header .row .search i {
 header .row .search input {
   width: 250px;
 }
-header .row .pages ul {
+header .row .pages > ul {
   display: flex;
 }
-header .row .pages ul li {
+header .row .pages > ul li {
   margin-left: 20px;
   list-style: none;
   position: relative;
 }
-header .row .pages ul li:hover ul {
+header .row .pages > ul li:hover ul {
   opacity: 1;
   visibility: visible;
   margin-top: 0;
 }
-header .row .pages ul li ul {
+header .row .pages > ul li ul {
   position: absolute;
   content: "";
   width: 200px;
@@ -51,19 +84,13 @@ header .row .pages ul li ul {
   margin-top: 100px;
   z-index: 1;
 }
-header .row .pages ul li ul li {
+header .row .pages > ul li ul li {
   padding: 0;
   height: 36px;
-}
-header .row .pages ul li ul li a {
-  height: 100%;
-  width: 100%;
-  display: inline-block;
-  padding: 0 10px;
   position: relative;
-  transition: all ease 0.4s;
+  z-index: -1;
 }
-header .row .pages ul li ul li a::after {
+header .row .pages > ul li ul li::after {
   transition: all ease 0.4s;
   content: "";
   position: absolute;
@@ -72,22 +99,42 @@ header .row .pages ul li ul li a::after {
   left: auto;
   right: auto;
   right: 0;
+  z-index: 1;
 }
-header .row .pages ul li ul li:hover a::after {
+header .row .pages > ul li ul li:hover::after {
   left: 0;
   right: auto;
   width: 100%;
   background-color: #2b4eff;
+  color: #fff;
 }
-header .row .pages ul li a {
+header .row .pages > ul li ul li:hover > a {
+  color: #fff !important;
+}
+header .row .pages > ul li ul li a {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  padding: 0 10px;
+  position: relative;
+  transition: all ease 0.4s;
+  z-index: 11;
+}
+header .row .pages > ul li a {
   text-decoration: none;
   color: #0e1133;
+  transition: all ease 0.2s;
 }
-header .row .pages ul li a:hover {
-  color: white;
+header .row .pages > ul li > a:hover {
+  color: #2b4eff;
 }
-header .row .pages ul li i {
+header .row .pages > ul li > a:hover i {
+  transform: rotate(-180deg);
+}
+header .row .pages > ul li i {
   font-size: 12px;
+  margin-left: 5px;
+  transition: all ease 0.3s;
 }
 header .row .shbtn .search {
   width: 280px;
@@ -147,6 +194,7 @@ header .row .shbtn button:hover {
   position: absolute;
   left: 50px;
   top: 120px;
+  animation: spin 5s linear infinite;
 }
 #title img:nth-child(3) {
   position: absolute;
@@ -170,8 +218,8 @@ header .row .shbtn button:hover {
 #title .container .third {
   position: absolute;
   right: 635px;
-  bottom: 50px;
-  animation: hero-dot-1 5s linear 0s infinite alternate;
+  top: 500px;
+  animation: translateY 10s linear infinite;
   z-index: 0;
 }
 #title .container .row div:first-child {
@@ -187,6 +235,24 @@ header .row .shbtn button:hover {
   font-weight: 700;
   font-size: 45px;
   line-height: 1;
+}
+#title .container .row div:first-child h3 .underline {
+  position: relative;
+  z-index: 2;
+}
+#title .container .row div:first-child h3 .underline::after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/yellow-bg.png);
+  background-size: cover;
+  width: 100%;
+  height: 12px;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  z-index: -5;
+  background-repeat: no-repeat;
+  animation: translate 2s linear infinite;
 }
 #title .container .row div:first-child p {
   font-size: 22px;
@@ -207,6 +273,28 @@ header .row .shbtn button:hover {
   top: 250px;
   right: 275px;
 }
+#title .container .row div:nth-child(2) .alert-msj {
+  width: 270px;
+  height: 78px;
+  background-color: #fff;
+  z-index: 111;
+  position: absolute;
+  right: 50px;
+  bottom: 225px;
+  padding: 15px 25px 20px;
+  animation: jump 2s linear infinite;
+}
+#title .container .row div:nth-child(2) .alert-msj p {
+  font-size: 14px;
+  color: #474956;
+  margin: 0;
+}
+#title .container .row div:nth-child(2) .alert-msj h3 {
+  font-size: 16px !important;
+  font-weight: 600;
+  color: #0e1133;
+  margin: 0;
+}
 #title .container .row div:nth-child(3) img {
   max-width: 200px;
   max-height: 240px;
@@ -217,6 +305,70 @@ header .row .shbtn button:hover {
   top: 300px;
 }
 
+@keyframes jump {
+  0% {
+    bottom: 265px;
+  }
+  25% {
+    bottom: 245px;
+  }
+  50% {
+    bottom: 260px;
+  }
+  75% {
+    bottom: 250px;
+  }
+  100% {
+    bottom: 225px;
+  }
+}
+@keyframes translateY {
+  0% {
+    top: 500px;
+  }
+  50% {
+    top: 620px;
+  }
+  100% {
+    top: 500px;
+  }
+}
+@keyframes translate {
+  0% {
+    width: 0;
+  }
+  25% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#courses .container .icons .row div div:hover {
+  background-color: #2b4eff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  transition: all ease 0.6s;
+}
+#courses .container .icons .row div div:hover h4 {
+  color: #fff;
+}
+#courses .container .icons .row div div:hover p {
+  color: #fff;
+}
+
+.fa-solid .fas {
+  position: absolute;
+  bottom: 0;
+  right: 92px;
+  font-size: 15px;
+  color: #6d6e75;
+}
+
 #courses {
   height: 120vh;
 }
@@ -224,113 +376,152 @@ header .row .shbtn button:hover {
   display: flex;
   justify-content: space-between;
 }
-#courses .container .row div:last-child {
+#courses .container .row > div:first-child span {
   position: relative;
+  z-index: 2;
 }
-#courses .container .row div:last-child span {
+#courses .container .row > div:first-child span::after {
+  content: "";
   position: absolute;
-  bottom: 0;
+  background-image: url(../images/yellow-bg.png);
+  background-size: cover;
+  width: 100%;
+  height: 12px;
+  left: 0;
   right: 0;
+  bottom: 5px;
+  z-index: -5;
+  background-repeat: no-repeat;
+  animation: translate 2s linear infinite;
+}
+#courses .container .row > div:last-child {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+#courses .container .row > div:last-child .hover {
+  display: inline-block;
+  cursor: pointer;
+}
+#courses .container .row > div:last-child .hover:hover span {
+  color: #2b4eff;
+}
+#courses .container .row > div:last-child .hover:hover i {
+  color: #2b4eff;
+  transform: translateX(8px);
+}
+#courses .container .row > div:last-child .hover > span {
+  bottom: 0;
+  right: 37px;
   color: #6d6e75;
   margin-right: 10px;
+  transition: all ease 0.3s;
+  font-size: 18px;
+  font-weight: 500;
 }
-#courses .container .icons {
-  position: relative;
+#courses .container .row > div:last-child .hover i {
+  bottom: 0;
+  right: 30px;
+  font-size: 15px;
+  color: #6d6e75;
+  transition: all ease 0.3s;
 }
-#courses .container .icons .row div:nth-child(2) {
-  position: relative;
+#courses .icons {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 24px;
 }
-#courses .container .icons .row div:nth-child(2) img {
-  position: absolute;
-  left: 50px;
-}
-#courses .container .icons .row div {
+#courses .icons .grid-item {
   display: flex;
-  justify-content: center;
+  border: 2px solid #eef0f6;
+  border-radius: 6px;
   align-items: center;
+  padding: 20px 40px;
+  transition: all ease 0.5s;
+  cursor: pointer;
 }
-#courses .container .icons .row div div {
-  width: 360px;
-  height: 90px;
-  display: flex;
-  border: 1px solid black;
-  border-radius: 10px;
+#courses .icons .grid-item:hover {
+  background-color: #2b4eff;
+  color: #fff;
+  box-shadow: 0 20px 30px rgba(4, 23, 118, 0.3019607843);
+  border-color: #2b4eff;
 }
-#courses .container .icons .row div div p {
-  position: absolute;
-  bottom: -3px;
-  right: 42px;
+#courses .icons .grid-item:hover p {
+  color: #fff;
 }
-#courses .container .icons .row div div img {
+#courses .icons .grid-item img {
   width: 40px;
   height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 30px;
 }
-#courses .container .icons .row:nth-child(2) {
+#courses .icons .grid-item h4 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+}
+#courses .icons .grid-item p {
+  line-height: 26px;
+  font-weight: 500;
+  color: #6d6e75;
+  transition: all ease 0.5s;
+}
+#courses .img-icons {
+  background-image: url(../images/banner-bg-1.jpg);
+  width: 456px;
+  height: 265px;
+}
+#courses .img-icons .row {
+  display: flex;
+}
+#courses .img-icons .row div:first-child {
   position: relative;
 }
-#courses .container .icons .row:nth-child(2) img {
-  position: absolute;
-  position: absolute;
-  left: 50px;
-}
-#courses .container .icons .row:nth-child(2) div:nth-child(3) img {
-  position: absolute;
-  left: 70px;
-}
-#courses .container .icons .row:nth-child(3) {
-  position: relative;
-}
-#courses .container .icons .row:nth-child(3) div:first-child img {
-  position: absolute;
-  position: absolute;
-  left: 70px;
-}
-#courses .container .icons .row:nth-child(3) div:first-child h4 {
-  position: absolute;
-  left: 100px;
-}
-#courses .container .icons .row:nth-child(3) div:first-child p {
-  position: absolute;
-  left: 70px;
-}
-#courses .container .icons .row:nth-child(3) div:nth-child(2) img {
-  position: absolute;
-  position: absolute;
-  left: 70px;
-}
-#courses .container .icons .row:nth-child(3) div:nth-child(2) h4 {
-  position: absolute;
-  left: 120px;
-}
-#courses .container .icons .row:nth-child(3) div:nth-child(2) p {
-  position: absolute;
-  left: 70px;
-}
-#courses .container .icons .row:nth-child(3) div:nth-child(3) img {
-  position: absolute;
-  position: absolute;
-  left: 70px;
-}
-#courses .container .icons .row:nth-child(3) div:nth-child(3) h4 {
-  position: absolute;
-  left: 100px;
-}
-#courses .container .icons .row:nth-child(3) div:nth-child(3) p {
-  position: absolute;
-  left: 70px;
-}
-#courses .container .img-icons {
-  background: url(assets/img/banner/banner-bg-1.jpg) center center/cover no-repeat;
-  width: 576px;
-  height: 264px;
-}
-#courses .container .img-icons .row div:first-child div span {
+#courses .img-icons .row div:first-child div:first-child span {
   border: 1px solid black;
   border-radius: 10px;
   background-color: #fc4389;
   width: 50px;
   height: 10px;
+  position: absolute;
+  top: 37px;
+  left: 43px;
+  width: 61px;
+  height: 27px;
+  text-align: center;
 }
+#courses .img-icons .row div:first-child div:first-child h5 {
+  position: absolute;
+  top: 71px;
+  left: 27px;
+  width: 253px;
+}
+#courses .img-icons .row div:first-child div:first-child button {
+  position: absolute;
+  bottom: -202px;
+  left: 40px;
+  width: 135px;
+}
+#courses .img-icons .row div:first-child div:last-child {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#courses .img-icons .row div:first-child div:last-child img {
+  width: 240px;
+  height: 156px;
+  margin-left: 20px;
+  position: absolute;
+  top: 41px;
+  right: -230px;
+}
+#courses .img-icons .row div:last-child {
+  position: absolute;
+  right: 0;
+}
+
 @media (max-width: 576px) {
   .icon {
     display: none;
