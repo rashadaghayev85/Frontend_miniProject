@@ -955,6 +955,7 @@ main #events .container div:nth-child(5) .dtl i {
 main #end {
   height: 120vh;
   color: #6d6e75;
+  margin-bottom: 170px;
 }
 main #end .row {
   height: 200px;
@@ -1054,6 +1055,10 @@ main #end .tab-menu .arguments > div:nth-child(2) .triangle::after {
 }
 main #end .tab-menu .arguments > div:nth-child(2) button {
   margin-bottom: 20px;
+}
+main #end .tab-menu .arguments > div:nth-child(2) button:hover {
+  background-color: #0d6efd !important;
+  color: #fff;
 }
 
 footer {

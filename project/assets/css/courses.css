@@ -1,5 +1,5 @@
 header {
-  background-color: #edeef3;
+  background-color: transparent;
   height: 90px;
   position: fixed;
   z-index: 1111;
@@ -29,6 +29,7 @@ header .row .logo-menu div:nth-child(2) .dropdown {
   position: relative;
   display: inline-block;
   padding-bottom: 20px;
+  color: #fff;
 }
 header .row .logo-menu div:nth-child(2) .dropdown ul {
   position: absolute;
@@ -127,10 +128,11 @@ header .row .pages > ul li ul li a {
   position: relative;
   transition: all ease 0.4s;
   z-index: 11;
-}
-header .row .pages > ul li a {
-  text-decoration: none;
   color: #0e1133;
+}
+header .row .pages > ul li > a {
+  text-decoration: none;
+  color: #fff;
   transition: all ease 0.2s;
 }
 header .row .pages > ul li > a:hover {
@@ -194,9 +196,37 @@ main #img {
   background-image: url(../images/courses-title-img.jpg);
   width: 100%;
   height: 450px;
-  opacity: 0.8;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+main #img .container {
+  position: relative;
+  z-index: 111;
+  flex-direction: column;
+}
+main #img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 3, 32, 0.6);
+  opacity: 0.8;
+  z-index: 0;
+}
+main #img h1 {
+  font-size: 70px;
+  line-height: 62px;
+  color: #fff;
+}
+main #img .circle {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+main #img p {
+  color: #fff;
+  margin: 0 10px;
 }
 main #cards {
   background-color: #fff;
@@ -224,6 +254,14 @@ main #cards .container .tpc > div .dropdown {
   position: absolute;
   right: 20px;
   top: 7px;
+}
+main #cards .container .section div button:nth-child(2):hover {
+  background-color: #2b4eff;
+  color: #fff;
+}
+main #cards .container .section div button:nth-child(4):hover {
+  background-color: #2b4eff;
+  color: #fff;
 }
 main .cards {
   display: grid;

@@ -1,5 +1,5 @@
 header {
-    background-color: #edeef3;
+    background-color: transparent;
     height: 90px;
     position: fixed;
     z-index: 1111;
@@ -53,6 +53,7 @@ header {
                     position: relative;
                     display: inline-block;
                     padding-bottom: 20px;
+                    color: #fff;
 
                     ul {
                         position: absolute;
@@ -174,6 +175,7 @@ header {
                                 position: relative;
                                 transition: all ease .4s;
                                 z-index: 11;
+                                color: #0e1133;
 
 
 
@@ -184,9 +186,9 @@ header {
                         }
                     }
 
-                    a {
+                    > a {
                         text-decoration: none;
-                        color: #0e1133;
+                        color: #fff;
                         transition: all ease .2s;
                     }
 
@@ -270,10 +272,40 @@ main{
         background-image: url(../images/courses-title-img.jpg);
         width: 100%;
         height: 450px;
-        opacity: 0.8;
+        // opacity: 0.8;
         
         background-repeat: no-repeat;
         background-size: cover;
+        position: relative;
+        .container {
+            position: relative;
+            z-index: 111;
+            flex-direction: column;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0,3,32,.6);
+            opacity: 0.8;
+            z-index: 0;
+        }
+        h1 {
+            font-size: 70px;
+            line-height: 62px;
+            color: #fff;
+        }
+        .circle {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        p {
+            color: #fff;
+            margin: 0 10px;
+            
+        }
     }
     #cards {
         background-color: #fff;
@@ -316,7 +348,25 @@ main{
                 }
             }
           }
+          .section{
+            div{
+                button:nth-child(2){
+                   &:hover{
+                    background-color: #2b4eff;
+                   color: #fff;
+                   }
+                }
+                button:nth-child(3){
 
+                }
+                button:nth-child(4){
+                    &:hover{
+                        background-color: #2b4eff;
+                       color: #fff;
+                       }
+                }
+            }
+          }
 
             }
         }
