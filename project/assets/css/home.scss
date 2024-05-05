@@ -87,6 +87,19 @@ header {
                         visibility: hidden;
                         transition: all ease .3s;
                         margin-top: 80px;
+                        list-style: none;
+                        li{
+                            border-bottom: none;
+                            a{
+                                text-decoration: none;
+                                color: #6d6e75;
+                            }
+                            &:hover{
+                                a{
+                                    color:#1C00FF;
+                                }
+                            }
+                        }
                     }
 
                     &:hover ul {
@@ -1452,6 +1465,7 @@ footer {
 
         .row:nth-child(2) {
             div:first-child {
+                margin-top: 1rem !important;
                 p {
                     font-size: 16px;
                     line-height: 24px;

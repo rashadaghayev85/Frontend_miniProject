@@ -62,6 +62,17 @@ header .row .logo-menu div:nth-child(2) .dropdown ul {
   visibility: hidden;
   transition: all ease 0.3s;
   margin-top: 80px;
+  list-style: none;
+}
+header .row .logo-menu div:nth-child(2) .dropdown ul li {
+  border-bottom: none;
+}
+header .row .logo-menu div:nth-child(2) .dropdown ul li a {
+  text-decoration: none;
+  color: #6d6e75;
+}
+header .row .logo-menu div:nth-child(2) .dropdown ul li:hover a {
+  color: #1C00FF;
 }
 header .row .logo-menu div:nth-child(2) .dropdown:hover ul {
   opacity: 1;
@@ -1072,6 +1083,9 @@ footer .container .row:first-child > div div:nth-child(2) img {
 footer .container .row:first-child > div div:nth-child(2) button {
   position: relative;
   z-index: 111;
+}
+footer .container .row:nth-child(2) div:first-child {
+  margin-top: 1rem !important;
 }
 footer .container .row:nth-child(2) div:first-child p {
   font-size: 16px;
