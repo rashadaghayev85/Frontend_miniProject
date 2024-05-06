@@ -21,7 +21,9 @@ body {
         animation: translate 2s linear infinite;
     }
 }
-
+.active{
+    color: #1C00FF !important;
+}
 header {
     background-color: #edeef3;
     height: 90px;
@@ -1618,6 +1620,10 @@ footer {
         }
        
     }
+}
+
+.hide {
+    display: none;
 }
     
 

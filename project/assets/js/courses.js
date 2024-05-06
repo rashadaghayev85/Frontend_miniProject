@@ -25,3 +25,85 @@ document.addEventListener('scroll' , () => {
         // body.style.padding = "0"
     }
 })
+
+let a = document.querySelectorAll("button")
+let exam = document.querySelectorAll (".exam")
+let icon = document.querySelector (".icon")
+
+
+a.forEach(element => {
+    element.addEventListener('click', () => {
+        document.querySelector('.active')?.classList.remove('active')
+        element.classList.add('active');
+    })
+    if(icon.className === "active"){
+        exam.forEach(e => {
+            e.classList.add("d-flex")
+        })
+    }
+    else{
+        exam.forEach(e => {
+            e.classList.remove("d-flex")
+        })
+    }
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // a.forEach(element => {
+    //     element.addEventListener("click",function(){
+         
+    //         a.forEach(element => {
+    //             element.classList.remove("active")
+    //             if (element.getElementsByClassName("active")) {
+    //                 element.style.background = "#2b4eff"
+    //             }
+    //             else {
+    //                 element.style.background = "transparent"
+    //             }
+    
+    
+    
+    //     });
+    
+    //         element.classList.add("active")
+
+           
+    
+    
+    
+    //       } )
+    // }) 
+    // a.forEach(element => {
+    //     if (element.getElementsByClassName("active")) {
+    //         element.style.background = "#2b4eff"
+    //     }
+    //     else {
+    //         element.style.background = "transparent"
+    //     }
+    // })
+

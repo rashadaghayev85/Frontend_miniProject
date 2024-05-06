@@ -267,6 +267,9 @@ header {
 
     }
 }
+.flex-1 {
+    flex-grow: 1;
+}
 main{
     #img{
         background-image: url(../images/courses-title-img.jpg);
@@ -321,31 +324,63 @@ main{
             background-color: #edeef3;
             padding: 15px 20px;
             border-radius: 4px;
-            >div{
-                position:relative ;
-                button{
-                    i{
+            > div{
+                .category {
+                    button {
+                        border: none;
+                        outline: none;
+                        width: 30px;
+                        height: 30px;
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: none;
+                        margin-right: 6px;
+                        border-radius: 6px;
 
+                        // i {
+                        //     color: #000;
+                        // }
                     }
-                }
-                i:nth-child(2){
-                  margin-left: 10px;
-                  font-size: 20px;
+                    button.active {
+                        background-color: #2b4eff;
+                        color: #fff;
 
-                }
-                div:nth-child(3){
-                    position: absolute;
-                    left: 130px;
-                    top: 7px;
-                    h4{
-
+                        i {
+                            color: #fff;
+                        }
+                        .st0 {
+                            fill: #2b4eff;
+                            stroke-width:1;
+                            stroke: #fff;
+                        }
+                        
                     }
+                    button:nth-child(2).active {
+                        .exam {
+                            display: flex;
+                        }
+                    }
+                    svg {
+                        width: 14px;
+                        height: 14px;
+                        .st0 {
+                            fill: #fff;
+                            // border: 2px solid #000;
+                            stroke-width:1;
+                            stroke: #000;
+                        }
+                    }
+                    h3 {
+                        margin-left: 12px;
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: #53545b;
+                        margin-bottom: 0;
+                    }
+
                 }
-                .dropdown{
-                  position: absolute;
-                  right: 20px;
-                  top: 7px;
-                }
+                .dropdown{}
             }
           }
           .section{

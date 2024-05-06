@@ -14,3 +14,36 @@ document.addEventListener('scroll' , () => {
         // body.style.padding = "0"
     }
 })
+
+    let filterButtons=document.querySelectorAll(".nav button")
+    let filterableCards = document.querySelectorAll (".cards .exam")
+ 
+    const filterCards = e => {
+        document.querySelector(".active").classList.remove("active")
+        e.target.classList.add("active")
+
+        filterableCards.forEach(card => {
+            card.classList.add("hide");
+            if(card.dataset.name === e.target.dataset.name || e.target.dataset.name === "all"){
+                card.classList.remove("hide")
+            }
+        })
+    }
+
+
+
+
+
+    filterButtons.forEach(button => button.addEventListener("click", filterCards))
+
+
+
+
+
+
+
+
+
+    
+ 
+    

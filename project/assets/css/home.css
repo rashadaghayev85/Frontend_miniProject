@@ -21,6 +21,10 @@ body {
   animation: translate 2s linear infinite;
 }
 
+.active {
+  color: #1C00FF !important;
+}
+
 header {
   background-color: #edeef3;
   height: 90px;
@@ -1208,4 +1212,8 @@ footer .container .row:nth-child(3) {
   right: 600px;
   border-top: 1px solid #1c1f3f;
   padding: 20px 0;
+}
+
+.hide {
+  display: none;
 }/*# sourceMappingURL=home.css.map */
