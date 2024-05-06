@@ -220,6 +220,42 @@ header .row .shbtn button:hover {
     width: 100%;
   }
 }
+main #img {
+  background-image: url(../images/courses-title-img.jpg);
+  width: 100%;
+  height: 450px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+main #img .container {
+  position: relative;
+  z-index: 111;
+  flex-direction: column;
+}
+main #img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 3, 32, 0.6);
+  opacity: 0.8;
+  z-index: 0;
+}
+main #img h1 {
+  font-size: 70px;
+  line-height: 62px;
+  color: #fff;
+}
+main #img .circle {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+main #img p {
+  color: #fff;
+  margin: 0 10px;
+}
 main #form {
   padding: 120px 0;
 }

@@ -43,7 +43,24 @@ header .row .logo-menu > div:first-child {
   text-align: center;
 }
 header .row .logo-menu div:nth-child(2) {
+  cursor: pointer;
   text-align: start;
+}
+header .row .logo-menu div:nth-child(2):hover {
+  color: #0d6efd;
+}
+header .row .logo-menu div:nth-child(2):hover svg path {
+  fill: #0d6efd !important;
+}
+header .row .logo-menu div:nth-child(2):hover svg {
+  filter: none;
+}
+header .row .logo-menu div:nth-child(2) svg {
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+  filter: brightness(1) invert(1);
 }
 header .row .logo-menu div:nth-child(2) i {
   cursor: pointer;
@@ -433,11 +450,19 @@ main #courses .container .icons .grid-item {
   transition: all ease 0.5s;
   cursor: pointer;
 }
+main #courses .container .icons .grid-item svg {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
 main #courses .container .icons .grid-item:hover {
   background-color: #2b4eff;
   color: #fff;
   box-shadow: 0 20px 30px rgba(4, 23, 118, 0.3019607843);
   border-color: #2b4eff;
+}
+main #courses .container .icons .grid-item:hover svg {
+  filter: brightness(0) invert(1);
 }
 main #courses .container .icons .grid-item:hover p {
   color: #fff;

@@ -298,6 +298,45 @@ header {
     }
 }
 main {
+    #img{
+        background-image: url(../images/courses-title-img.jpg);
+        width: 100%;
+        height: 450px;
+        // opacity: 0.8;
+        
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        .container {
+            position: relative;
+            z-index: 111;
+            flex-direction: column;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0,3,32,.6);
+            opacity: 0.8;
+            z-index: 0;
+        }
+        h1 {
+            font-size: 70px;
+            line-height: 62px;
+            color: #fff;
+        }
+        .circle {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        p {
+            color: #fff;
+            margin: 0 10px;
+            
+        }
+    }
     #form {
         padding: 120px 0;
         
