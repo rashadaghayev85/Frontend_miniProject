@@ -25,6 +25,10 @@ body {
   color: #1C00FF !important;
 }
 
+.clickbtn {
+  background-color: #1C00FF;
+}
+
 header {
   background-color: #edeef3;
   height: 90px;
@@ -232,6 +236,9 @@ header .row .shbtn button {
 }
 header .row .shbtn button:hover {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+header .row .nav-bar {
+  display: none;
 }
 
 main #title {
@@ -1216,23 +1223,103 @@ footer .container .row:nth-child(3) {
 
 .hide {
   display: none;
-  color: #03a9f4;
 }
 
-@media only screen and (max-width: 600px) {
-  header div .logo-menu div:first-child {
-    border-right: none;
+@media (max-width: 576px) {
+  header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-  header div .logo-menu .dropdown {
-    display: none !important;
+  header .logo-menu > div:nth-child(1) {
+    margin-top: 0 !important;
   }
-  header div .pages {
+  header .logo-menu > div:nth-child(2) {
     display: none;
   }
-  header div .shbtn {
-    display: none !important;
+  body {
+    position: relative;
+    height: 100%;
   }
-  header div .sidebar {
-    display: inline-block !important;
+  body .sidebar {
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 111111111;
+    padding: 30px;
+  }
+  body .sidebar .header {
+    margin-bottom: 40px;
+  }
+  body .sidebar .header button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background: transparent;
+    outline: none;
+    transition: all ease 0.4s;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  body .sidebar .header button i {
+    transform: translate(1px, 7px);
+    transition: all ease-in 0.4s;
+  }
+  body .sidebar .header button p {
+    transform: translateY(20px);
+    transition: all ease-in 0.4s;
+    margin-bottom: 0;
+  }
+  body .sidebar .header button:hover {
+    width: 100px;
+    border-radius: 0;
+  }
+  body .sidebar .header button:hover p {
+    transform: translateY(-14px);
+  }
+  body .sidebar .header button:hover i {
+    transform: translateY(-20px);
+  }
+  body .sidebar .main .drop {
+    list-style: none;
+  }
+  body .sidebar .main .drop > li {
+    position: relative;
+  }
+  body .sidebar .main .drop > li i {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    transition: all ease 0.3s;
+  }
+  body .sidebar .main .drop > li ul {
+    height: 0;
+    transition: all ease 0.4s;
+    background-color: #03a9f4;
+    display: block;
+    overflow: hidden;
+    list-style: none;
+  }
+  body .sidebar .main .drop > li a {
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+    text-decoration: none;
+    display: block;
+    color: #000;
+  }
+  body .sidebar .main .drop > li:hover ul {
+    display: flex;
+    flex-direction: column;
+    height: 196px;
+  }
+  body .sidebar .main .drop > li:hover i {
+    transform: rotate(-180deg);
   }
 }/*# sourceMappingURL=home.css.map */

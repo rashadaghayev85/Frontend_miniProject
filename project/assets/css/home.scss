@@ -24,14 +24,17 @@ body {
 .active{
     color: #1C00FF !important;
 }
+.clickbtn{
+    background-color: #1C00FF;
+}
 header {
     background-color: #edeef3;
     height: 90px;
     position: fixed;
     z-index: 1111;
     width: 100%;
-    transition: all ease .3s;
-
+    transition: all ease .3s;   
+        
     &.scroll {
         position: fixed;
         // z-index: 111;
@@ -307,6 +310,11 @@ header {
                 }
             }
         }
+        .nav-bar{
+                display: none;
+        }
+        
+        
 
     }
 }
@@ -1187,10 +1195,6 @@ main {
                 border-radius: 10px;
                 transition: all ease-in .5s;
 
-                &:hover {
-                    // border-left: 5px solid #2b4eff;
-                    // background-color: #2b4eff;
-                }
                 &::before {
                     position: absolute;
                     content: "";
@@ -1624,43 +1628,136 @@ footer {
 
 .hide {
     display: none;
-  
+}
 
 
-@media only screen and (max-width: 600px) {
+
+
+@media (max-width:576px) {
     header{
-            div{
-                .logo-menu{
-                    div:first-child{
-                        border-right: none;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // display: none;
+        .logo-menu {
+
+            > div:nth-child(1) {
+                margin-top: 0 !important;
+            }
+            > div:nth-child(2) {
+                display:none;
+            }
+        } 
+        
+    }
+    main,footer {
+        // display: none;
+    }
+
+    body {
+        position: relative;
+        height: 100%;
+        
+        .sidebar {
+            width: 300px;
+            height: 100%;
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 111111111;
+            padding: 30px;
+            .header {
+                margin-bottom: 40px;
+                button {
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid #000;
+                    border-radius: 50%;
+                    background: transparent;
+                    outline: none;
+                    transition: all ease .4s;
+                    overflow: hidden;
+                    font-size: 14px;
+                    font-weight: 600;
+                    
+                    
+                    i{
+                        transform: translate(1px,7px);
+                        transition: all ease-in .4s;
                     }
-                     .dropdown{
-                        display: none !important;
-                     }
+                    p{
+                        transform: translateY(20px);
+                        transition: all ease-in .4s;
+                        margin-bottom: 0;
+                    }
+    
+                    &:hover {
+                        width: 100px;
+                        border-radius: 0;
+                    }
+                    &:hover p {
+                        transform: translateY(-14px);
+                    }
+                    &:hover i {
+                        transform: translateY(-20px);
+                    }
                 }
-                .pages{
-                      display: none;
-                }
-                .shbtn{
-                   display: none !important;
-                }
-                .sidebar{
-                    display: inline-block !important;
+            }
+            .main {
+                .drop{
+                    list-style: none;
+                    > li {
+                        position: relative;
+                        
+                        i {
+                            position: absolute;
+                            right: 0;
+                            top: 15px;
+                            // bottom: 0;
+                            transition: all ease .3s;
+                        }
+                        ul{
+                            // position: absolute;
+                            // opacity: 0;
+                            // visibility: hidden;
+                            height: 0;
+                            transition: all ease .4s;
+                            background-color: #03a9f4;
+                            display: block;
+                            overflow: hidden;
+                            list-style: none;
+
+                            
+                        }
+                        a{
+                            border-bottom: 1px solid #ddd;
+                            padding: 12px 0;
+                            text-decoration: none;
+                            display: block;
+                            color: #000;
+                        }
+                        &:hover ul {
+                            // position: relative;
+                            // opacity: 1;
+                            // visibility: visible;
+                            display: flex;
+                            flex-direction: column;
+                            height: 196px;
+                        }
+                        &:hover  i {
+                            transform: rotate(-180deg);
+
+                        }
+                    }
                 }
             }
 
+            
+        }
     }
-    main{
-
-    }
-    footer{
-
-    }
-  } 
-//   @media screen (max-width: 600px){
-//     body {
-//         background-color: lightblue;
-//       }
-//   }
+}
 
   
