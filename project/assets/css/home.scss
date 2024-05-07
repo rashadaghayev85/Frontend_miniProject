@@ -1624,7 +1624,43 @@ footer {
 
 .hide {
     display: none;
-}
-    
+  
+
+
+@media only screen and (max-width: 600px) {
+    header{
+            div{
+                .logo-menu{
+                    div:first-child{
+                        border-right: none;
+                    }
+                     .dropdown{
+                        display: none !important;
+                     }
+                }
+                .pages{
+                      display: none;
+                }
+                .shbtn{
+                   display: none !important;
+                }
+                .sidebar{
+                    display: inline-block !important;
+                }
+            }
+
+    }
+    main{
+
+    }
+    footer{
+
+    }
+  } 
+//   @media screen (max-width: 600px){
+//     body {
+//         background-color: lightblue;
+//       }
+//   }
 
   

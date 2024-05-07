@@ -512,7 +512,7 @@ main{
 
        div:last-child{
         .recent-post{
-            input{
+            div{
                 background-color: #f3f4f8;
                 height: 56px;
                 width: 100%;
@@ -521,12 +521,27 @@ main{
                 transition: all ease 0.3s;
                 padding: 0 23px;
                 border-radius: 4px;
-                &:focus {
-                    background-color: #fff;
-                    border: 1px solid #2b4eff;
-                    transition: all ease .3s;
+                button{
+                    width: 25px;
+                    height:56px;
+                    border: none !important;
+                    background-color: transparent !important;
+                   
                 }
-               
+                input{
+                   width: 90%;
+                   border: none !important;
+                   background-color: transparent !important;
+                   border:1px solid transparent !important;
+                   
+                    &:focus {
+                        border:1px solid transparent !important;
+                        background-color: transparent;
+                        transition: all ease .3s;
+                        outline: none;
+                    }
+                   
+                }
             }
             .bucket {
                 height: 20px;

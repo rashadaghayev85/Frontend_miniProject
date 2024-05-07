@@ -1,5 +1,5 @@
 header {
-  background-color: #edeef3;
+  background-color: transparent;
   height: 90px;
   position: fixed;
   z-index: 1111;
@@ -29,6 +29,7 @@ header .row .logo-menu div:nth-child(2) .dropdown {
   position: relative;
   display: inline-block;
   padding-bottom: 20px;
+  color: #fff;
 }
 header .row .logo-menu div:nth-child(2) .dropdown ul {
   position: absolute;
@@ -127,10 +128,11 @@ header .row .pages > ul li ul li a {
   position: relative;
   transition: all ease 0.4s;
   z-index: 11;
-}
-header .row .pages > ul li a {
-  text-decoration: none;
   color: #0e1133;
+}
+header .row .pages > ul li > a {
+  text-decoration: none;
+  color: #fff;
   transition: all ease 0.2s;
 }
 header .row .pages > ul li > a:hover {
@@ -259,28 +261,28 @@ main #img p {
 main #form {
   padding: 120px 0;
 }
-main #form h3 {
+main #form .container h3 {
   font-size: 40px;
   color: #0e1133;
   margin-bottom: 3px;
   font-weight: 700;
 }
-main #form > p {
+main #form .container > p {
   color: #53545b;
   margin-bottom: 15px;
   line-height: 26px;
 }
-main #form .row {
+main #form .container .row {
   margin-top: 40px;
 }
-main #form .row .col-7 > p {
+main #form .container .row .col-7 > p {
   margin-bottom: 40px;
 }
-main #form .row .col-7 .form {
+main #form .container .row .col-7 .form {
   width: 100%;
   gap: 24px;
 }
-main #form .row .col-7 .form .grid-item {
+main #form .container .row .col-7 .form .grid-item {
   background-color: #f3f4f8;
   height: 56px;
   width: 100%;
@@ -290,48 +292,48 @@ main #form .row .col-7 .form .grid-item {
   padding: 0 23px;
   border-radius: 4px;
 }
-main #form .row .col-7 .form .grid-item:focus {
+main #form .container .row .col-7 .form .grid-item:focus {
   background-color: #fff;
   border: 1px solid #2b4eff;
   transition: all ease 0.3s;
 }
-main #form .row .col-7 .form .grid-item:nth-child(3) {
+main #form .container .row .col-7 .form .grid-item:nth-child(3) {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 2;
 }
-main #form .row .col-7 .form .grid-item:nth-child(4) {
+main #form .container .row .col-7 .form .grid-item:nth-child(4) {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 3;
   height: auto;
 }
-main #form .row .col-7 .form textarea {
+main #form .container .row .col-7 .form textarea {
   resize: none;
   width: 100%;
   outline: none;
   border: none;
   padding: 20px 23px 0 23px !important;
 }
-main #form .row .col-7 .check {
+main #form .container .row .col-7 .check {
   margin: 20px 0;
 }
-main #form .row .col-7 .check p {
+main #form .container .row .col-7 .check p {
   margin-left: 8px;
   margin-bottom: 0;
   color: #53545b;
   cursor: pointer;
 }
-main #form .row .col-7 .check p a {
+main #form .container .row .col-7 .check p a {
   text-decoration: none;
   color: #0e1133;
   font-weight: 600;
   transition: all ease 0.3s;
 }
-main #form .row .col-7 .check p a:hover {
+main #form .container .row .col-7 .check p a:hover {
   color: #1C00FF;
 }
-main #form .row .col-7 button {
+main #form .container .row .col-7 button {
   background-color: #2b4eff;
   color: #fff;
   height: 50px;
@@ -342,22 +344,22 @@ main #form .row .col-7 button {
   outline: none;
   transition: all ease 0.3s;
 }
-main #form .row .col-7 button:hover {
+main #form .container .row .col-7 button:hover {
   box-shadow: 0 10px 24px rgba(4, 23, 118, 0.3019607843);
 }
-main #form .row .col-4 {
+main #form .container .row .col-4 {
   margin-right: 30px;
   height: -moz-max-content;
   height: max-content;
 }
-main #form .row .col-4 .adress {
+main #form .container .row .col-4 .adress {
   width: 376px;
   padding: 45px 70px 45px 40px;
   border-radius: 5px;
   background-color: #fff;
   box-shadow: 0 30px 50px rgba(1, 11, 60, 0.1019607843);
 }
-main #form .row .col-4 .adress img {
+main #form .container .row .col-4 .adress img {
   width: 18px;
   height: 18px;
   -o-object-fit: cover;
@@ -365,20 +367,20 @@ main #form .row .col-4 .adress img {
   margin-right: 15px;
   margin-top: 8px;
 }
-main #form .row .col-4 .adress > div div {
+main #form .container .row .col-4 .adress > div div {
   margin-bottom: 35px;
 }
-main #form .row .col-4 .adress > div div h4 {
+main #form .container .row .col-4 .adress > div div h4 {
   font-size: 20px;
 }
-main #form .row .col-4 .adress > div div p {
+main #form .container .row .col-4 .adress > div div p {
   transition: all ease 0.3s;
   cursor: pointer;
 }
-main #form .row .col-4 .adress > div div p:hover {
+main #form .container .row .col-4 .adress > div div p:hover {
   color: #2b4eff;
 }
-main #form .row .col-4 .adress .follow > div .icon {
+main #form .container .row .col-4 .adress .follow > div .icon {
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -389,29 +391,46 @@ main #form .row .col-4 .adress .follow > div .icon {
   margin-right: 10px;
   transition: all ease 0.5s;
 }
-main #form .row .col-4 .adress .follow > div .icon:nth-child(1) {
+main #form .container .row .col-4 .adress .follow > div .icon:nth-child(1) {
   background-color: rgba(40, 93, 161, 0.1);
   color: #285da1;
 }
-main #form .row .col-4 .adress .follow > div .icon:nth-child(1):hover {
+main #form .container .row .col-4 .adress .follow > div .icon:nth-child(1):hover {
   background-color: #285da1;
   color: #fff;
 }
-main #form .row .col-4 .adress .follow > div .icon:nth-child(2) {
+main #form .container .row .col-4 .adress .follow > div .icon:nth-child(2) {
   background-color: rgba(3, 169, 244, 0.1);
   color: #03a9f4;
 }
-main #form .row .col-4 .adress .follow > div .icon:nth-child(2):hover {
+main #form .container .row .col-4 .adress .follow > div .icon:nth-child(2):hover {
   background-color: #03a9f4;
   color: #fff;
 }
-main #form .row .col-4 .adress .follow > div .icon:nth-child(3) {
+main #form .container .row .col-4 .adress .follow > div .icon:nth-child(3) {
   background-color: rgba(216, 22, 63, 0.1);
   color: #d8163f;
 }
-main #form .row .col-4 .adress .follow > div .icon:nth-child(3):hover {
+main #form .container .row .col-4 .adress .follow > div .icon:nth-child(3):hover {
   background-color: #d8163f;
   color: #fff;
+}
+main #form .container .imgs img:first-child {
+  position: absolute;
+  right: 150px;
+  top: 650px;
+  z-index: -111;
+}
+main #form .container .imgs img:nth-child(2) {
+  position: absolute;
+  right: 100px;
+  top: 850px;
+}
+main #form .container .imgs img:nth-child(3) {
+  position: absolute;
+  right: 500px;
+  top: 1000px;
+  z-index: -111;
 }
 main #support {
   padding: 120px 0;

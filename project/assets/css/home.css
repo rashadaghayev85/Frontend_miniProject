@@ -1216,4 +1216,23 @@ footer .container .row:nth-child(3) {
 
 .hide {
   display: none;
+  color: #03a9f4;
+}
+
+@media only screen and (max-width: 600px) {
+  header div .logo-menu div:first-child {
+    border-right: none;
+  }
+  header div .logo-menu .dropdown {
+    display: none !important;
+  }
+  header div .pages {
+    display: none;
+  }
+  header div .shbtn {
+    display: none !important;
+  }
+  header div .sidebar {
+    display: inline-block !important;
+  }
 }/*# sourceMappingURL=home.css.map */

@@ -365,7 +365,7 @@ main #info-area .container div:first-child .cards .exam .exam-text > div:last-ch
   background-image: url(../icons/group.svg);
   margin: 0 8px 0 16px;
 }
-main #info-area .container div:last-child .recent-post input {
+main #info-area .container div:last-child .recent-post div {
   background-color: #f3f4f8;
   height: 56px;
   width: 100%;
@@ -375,10 +375,23 @@ main #info-area .container div:last-child .recent-post input {
   padding: 0 23px;
   border-radius: 4px;
 }
-main #info-area .container div:last-child .recent-post input:focus {
-  background-color: #fff;
-  border: 1px solid #2b4eff;
+main #info-area .container div:last-child .recent-post div button {
+  width: 25px;
+  height: 56px;
+  border: none !important;
+  background-color: transparent !important;
+}
+main #info-area .container div:last-child .recent-post div input {
+  width: 90%;
+  border: none !important;
+  background-color: transparent !important;
+  border: 1px solid transparent !important;
+}
+main #info-area .container div:last-child .recent-post div input:focus {
+  border: 1px solid transparent !important;
+  background-color: transparent;
   transition: all ease 0.3s;
+  outline: none;
 }
 main #info-area .container div:last-child .recent-post .bucket {
   height: 20px;
