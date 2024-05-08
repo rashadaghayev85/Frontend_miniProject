@@ -20,7 +20,24 @@ header .row .logo-menu > div:first-child {
   text-align: center;
 }
 header .row .logo-menu div:nth-child(2) {
+  cursor: pointer;
   text-align: start;
+}
+header .row .logo-menu div:nth-child(2):hover {
+  color: #0d6efd;
+}
+header .row .logo-menu div:nth-child(2):hover svg path {
+  fill: #0d6efd !important;
+}
+header .row .logo-menu div:nth-child(2):hover svg {
+  filter: none;
+}
+header .row .logo-menu div:nth-child(2) svg {
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+  filter: brightness(1) invert(1);
 }
 header .row .logo-menu div:nth-child(2) i {
   cursor: pointer;
@@ -29,7 +46,6 @@ header .row .logo-menu div:nth-child(2) .dropdown {
   position: relative;
   display: inline-block;
   padding-bottom: 20px;
-  color: #fff;
 }
 header .row .logo-menu div:nth-child(2) .dropdown ul {
   position: absolute;
@@ -128,11 +144,10 @@ header .row .pages > ul li ul li a {
   position: relative;
   transition: all ease 0.4s;
   z-index: 11;
-  color: #0e1133;
 }
-header .row .pages > ul li > a {
+header .row .pages > ul li a {
   text-decoration: none;
-  color: #fff;
+  color: #0e1133;
   transition: all ease 0.2s;
 }
 header .row .pages > ul li > a:hover {
@@ -191,9 +206,15 @@ header .row .shbtn button {
 header .row .shbtn button:hover {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
+header .row .nav-bar {
+  display: none;
+}
 
 .flex-1 {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 main #img {
@@ -234,8 +255,8 @@ main #img p {
 }
 main #cards {
   background-color: #fff;
-  height: 190vh;
   margin-top: 150px;
+  padding-bottom: 200px;
 }
 main #cards .container .tpc {
   background-color: #edeef3;
@@ -396,6 +417,9 @@ main .cards .exam .exam-text .card-title {
 main .cards .exam .exam-text .card-title:hover {
   color: #1C00FF;
 }
+main .cards .exam .exam-text .d-text {
+  font-size: 18px;
+}
 main .cards .exam .exam-text .teachers-photo {
   width: 35px;
   height: 35px;
@@ -552,4 +576,187 @@ footer .container .row:nth-child(3) {
   right: 600px;
   border-top: 1px solid #1c1f3f;
   padding: 20px 0;
+}
+
+.sidebar {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr !important;
+  }
+  header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .logo-menu > div:nth-child(1) {
+    margin-top: 0 !important;
+  }
+  header .logo-menu > div:nth-child(2) {
+    display: none;
+  }
+  body {
+    position: relative;
+    height: 100%;
+  }
+  body .sidebar {
+    width: 300px;
+    height: 100vh;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 111111111111111100;
+    padding: 30px;
+    display: block;
+  }
+  body .sidebar .header {
+    margin-bottom: 40px;
+  }
+  body .sidebar .header button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background: transparent;
+    outline: none;
+    transition: all ease 0.4s;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  body .sidebar .header button i {
+    transform: translate(1px, 7px);
+    transition: all ease-in 0.4s;
+  }
+  body .sidebar .header button p {
+    transform: translateY(20px);
+    transition: all ease-in 0.4s;
+    margin-bottom: 0;
+  }
+  body .sidebar .header button:hover {
+    width: 100px;
+    border-radius: 0;
+  }
+  body .sidebar .header button:hover p {
+    transform: translateY(-14px);
+  }
+  body .sidebar .header button:hover i {
+    transform: translateY(-20px);
+  }
+  body .sidebar .main .drop {
+    list-style: none;
+  }
+  body .sidebar .main .drop > li {
+    position: relative;
+  }
+  body .sidebar .main .drop > li i {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    transition: all ease 0.3s;
+  }
+  body .sidebar .main .drop > li ul {
+    height: 0;
+    transition: all ease 0.4s;
+    background-color: #03a9f4;
+    display: block;
+    overflow: hidden;
+    list-style: none;
+  }
+  body .sidebar .main .drop > li a {
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+    text-decoration: none;
+    display: block;
+    color: #000;
+  }
+  body .sidebar .main .drop > li:hover ul {
+    display: flex;
+    flex-direction: column;
+    height: 196px;
+  }
+  body .sidebar .main .drop > li:hover i {
+    transform: rotate(-180deg);
+  }
+  body .sidebar .main .search {
+    height: 50px;
+    border: 2px solid #f3f4f8;
+    padding: 5px;
+    background-color: #f3f4f8;
+  }
+  body .sidebar .main .search input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    flex-grow: 1;
+  }
+  body .sidebar .main .bucket {
+    height: 20px;
+    background-image: url(../icons/cart.svg);
+    width: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: #fff;
+    position: relative;
+    margin-top: 25px;
+  }
+  body .sidebar .main .bucket::after {
+    position: absolute;
+    content: "2";
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #2b4eff;
+    color: #fff;
+    top: -10px;
+    right: -10px;
+    font-size: 11px;
+  }
+  body .sidebar .main .bucket:hover::after {
+    background-color: #0e1133;
+  }
+  header .row .col-4:nth-child(2), header .row .col-4:nth-child(3) {
+    display: none !important;
+  }
+  footer {
+    height: auto !important;
+  }
+  footer .container .row:nth-child(1) img {
+    display: none;
+  }
+  footer .container .row:nth-child(1) > .col-12 {
+    flex-direction: column;
+    padding: 40px !important;
+    width: 90%;
+    margin: 0 auto !important;
+  }
+  footer .container .row:nth-child(1) > .col-12 > .col-8 {
+    width: 100%;
+    color: #fff;
+  }
+  footer .container .row:nth-child(1) > .col-12 > .col-8 h1 {
+    font-size: 25px;
+  }
+  footer .container .row:nth-child(1) > .col-12 > .col-4 {
+    padding-left: 0;
+  }
+  footer .container .row:nth-child(1) > .col-12 > .col-4 button {
+    margin-top: 30px;
+  }
+  footer .container .row:nth-child(2) {
+    flex-direction: column;
+  }
+  footer .container .row:nth-child(2) .col-3 {
+    width: 100%;
+  }
+  footer .container .row:nth-child(2) .col-3 ul {
+    padding: 0;
+  }
 }/*# sourceMappingURL=courses.css.map */

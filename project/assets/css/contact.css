@@ -222,6 +222,10 @@ header .row .shbtn button:hover {
     width: 100%;
   }
 }
+.sidebar {
+  display: none;
+}
+
 main #img {
   background-image: url(../images/courses-title-img.jpg);
   width: 100%;
@@ -583,4 +587,192 @@ footer .container .row:nth-child(2) {
   right: 600px;
   border-top: 1px solid #1c1f3f;
   padding: 20px 0;
+}
+
+main #form .container .imgs img:nth-child(2) {
+  z-index: -1;
+}
+
+@media (max-width: 576px) {
+  header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .logo-menu > div:nth-child(1) {
+    margin-top: 0 !important;
+  }
+  header .logo-menu > div:nth-child(2) {
+    display: none;
+  }
+  .sidebar {
+    width: 300px;
+    height: 100vh;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 111111111111111100;
+    padding: 30px;
+    display: block;
+  }
+  .sidebar .header {
+    margin-bottom: 40px;
+  }
+  .sidebar .header button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background: transparent;
+    outline: none;
+    transition: all ease 0.4s;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .sidebar .header button i {
+    transform: translate(1px, 7px);
+    transition: all ease-in 0.4s;
+  }
+  .sidebar .header button p {
+    transform: translateY(20px);
+    transition: all ease-in 0.4s;
+    margin-bottom: 0;
+  }
+  .sidebar .header button:hover {
+    width: 100px;
+    border-radius: 0;
+  }
+  .sidebar .header button:hover p {
+    transform: translateY(-14px);
+  }
+  .sidebar .header button:hover i {
+    transform: translateY(-20px);
+  }
+  .sidebar .main .drop {
+    list-style: none;
+  }
+  .sidebar .main .drop > li {
+    position: relative;
+  }
+  .sidebar .main .drop > li i {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    transition: all ease 0.3s;
+  }
+  .sidebar .main .drop > li ul {
+    height: 0;
+    transition: all ease 0.4s;
+    background-color: #03a9f4;
+    display: block;
+    overflow: hidden;
+    list-style: none;
+  }
+  .sidebar .main .drop > li a {
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+    text-decoration: none;
+    display: block;
+    color: #000;
+  }
+  .sidebar .main .drop > li:hover ul {
+    display: flex;
+    flex-direction: column;
+    height: 196px;
+  }
+  .sidebar .main .drop > li:hover i {
+    transform: rotate(-180deg);
+  }
+  .sidebar .main .search {
+    height: 50px;
+    border: 2px solid #f3f4f8;
+    padding: 5px;
+    background-color: #f3f4f8;
+  }
+  .sidebar .main .search input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    flex-grow: 1;
+  }
+  .sidebar .main .bucket {
+    height: 20px;
+    background-image: url(../icons/cart.svg);
+    width: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: #fff;
+    position: relative;
+    margin-top: 25px;
+  }
+  .sidebar .main .bucket::after {
+    position: absolute;
+    content: "2";
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #2b4eff;
+    color: #fff;
+    top: -10px;
+    right: -10px;
+    font-size: 11px;
+  }
+  .sidebar .main .bucket:hover::after {
+    background-color: #0e1133;
+  }
+  #form .row {
+    flex-direction: column;
+  }
+  #form .row .col-4, #form .row .col-7 {
+    width: 100%;
+  }
+  #form .row .col-4 .adress {
+    margin: 0 auto;
+  }
+  header .row .col-4:nth-child(2), header .row .col-4:nth-child(3) {
+    display: none !important;
+  }
+  .contact {
+    flex-direction: column;
+  }
+  footer {
+    height: auto !important;
+  }
+  footer .container .row:nth-child(1) img {
+    display: none;
+  }
+  footer .container .row:nth-child(1) > .col-12 {
+    flex-direction: column;
+    padding: 40px !important;
+    width: 90%;
+    margin: 0 auto !important;
+  }
+  footer .container .row:nth-child(1) > .col-12 > .col-8 {
+    width: 100%;
+    color: #fff;
+  }
+  footer .container .row:nth-child(1) > .col-12 > .col-8 h1 {
+    font-size: 25px;
+  }
+  footer .container .row:nth-child(1) > .col-12 > .col-4 {
+    padding-left: 0;
+  }
+  footer .container .row:nth-child(1) > .col-12 > .col-4 button {
+    margin-top: 30px;
+  }
+  footer .container .row:nth-child(2) {
+    flex-direction: column;
+  }
+  footer .container .row:nth-child(2) .col-3 {
+    width: 100%;
+  }
+  footer .container .row:nth-child(2) .col-3 ul {
+    padding: 0;
+  }
 }/*# sourceMappingURL=contact.css.map */

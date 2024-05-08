@@ -37,3 +37,17 @@ input.addEventListener("blur",function(){
     input.parentElement.style.border="none"
 
 })
+//filterButtons.forEach(button => button.addEventListener("click", filterCards))
+
+let sidebar = document.querySelector(".sidebar")
+    function klik() {
+        //sidebar.style.display = "none"
+    }
+  
+
+    let sidebarr=document.querySelector(".sidebar button");
+// console.log(sidebarr)
+    sidebarr.addEventListener("click",function(){
+     sidebar.style.display="none"
+    // alert("sj")
+    })

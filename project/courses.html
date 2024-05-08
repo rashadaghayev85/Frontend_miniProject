@@ -8,8 +8,67 @@
     <link rel="stylesheet" href="./assets/css/courses.css">
 </head>
 <body>
+    <div class="sidebar">
+        <div class="header d-flex justify-content-between align-items-center">
+            <img src="assets/images/logo.png" alt="">
+            <label for="check">
+                <button>
+                    <i class="fa-solid fa-xmark"></i>
+                    <p>CLOSE</p>
+                </button>
+            </label>
+        </div>
+        <div class="main">
+            <div>
+                <ul class="drop">
+                    <li><a href="home.html">HOME</a>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                        </ul>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </li>
+                    <li><a href="courses.html">COURSES</a>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                        </ul>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </li>
+                    <li><a href="blog.html">BLOG</a>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                        </ul>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </li>
+                    <li><a href="#">PAGES</a>
+                        <ul>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                        </ul>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="search d-flex align-items-center ">
+                <i class="fa-solid fa-magnifying-glass mx-3"></i>
+                <input type="text" placeholder="Search..">
+            </div>
+            <button class="bucket mx-3"></button>
+        </div>
+    </div>
     <header>
-        <div class="row col-12">
+        <div class="row col-12 d-flex">
             <div class="col-4 logo-menu ">
                 <div class="col-6 mt-4">
                     <img src="./assets/images/logo.png" alt="" class="">
@@ -18,7 +77,25 @@
                     <!-- <div class="icon"></div>
                     <span class="mx-5">Category</span> -->
                     <div class="dropdown">
-                        <i class="fa-solid fa-bars mt-2 mx-3"></i>Category
+                        <!-- <i class="fa-solid fa-bars mt-2 mx-3"></i> -->
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 276.2 276.2" style="enable-background:new 0 0 276.2 276.2;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:#0E1133;}
+                            </style>
+                            <g>
+                                <g>
+                                    <path class="st0" d="M33.1,2.5C15.3,2.5,0.9,17,0.9,34.8s14.5,32.3,32.3,32.3s32.3-14.5,32.3-32.3S51,2.5,33.1,2.5z"/>
+                                    <path class="st0" d="M137.7,2.5c-17.8,0-32.3,14.5-32.3,32.3s14.5,32.3,32.3,32.3c17.8,0,32.3-14.5,32.3-32.3S155.5,2.5,137.7,2.5    z"/>
+                                    <path class="st0" d="M243.9,67.1c17.8,0,32.3-14.5,32.3-32.3S261.7,2.5,243.9,2.5S211.6,17,211.6,34.8S226.1,67.1,243.9,67.1z"/>
+                                    <path class="st0" d="M32.3,170.5c17.8,0,32.3-14.5,32.3-32.3c0-17.8-14.5-32.3-32.3-32.3S0,120.4,0,138.2S14.5,170.5,32.3,170.5z"/>
+                                    <path class="st0" d="M136.8,170.5c17.8,0,32.3-14.5,32.3-32.3c0-17.8-14.5-32.3-32.3-32.3c-17.8,0-32.3,14.5-32.3,32.3    C104.5,156.1,119,170.5,136.8,170.5z"/>
+                                    <path class="st0" d="M243,170.5c17.8,0,32.3-14.5,32.3-32.3c0-17.8-14.5-32.3-32.3-32.3s-32.3,14.5-32.3,32.3    C210.7,156.1,225.2,170.5,243,170.5z"/>
+                                    <path class="st0" d="M33,209.1c-17.8,0-32.3,14.5-32.3,32.3c0,17.8,14.5,32.3,32.3,32.3s32.3-14.5,32.3-32.3S50.8,209.1,33,209.1z    "/>
+                                    <path class="st0" d="M137.6,209.1c-17.8,0-32.3,14.5-32.3,32.3c0,17.8,14.5,32.3,32.3,32.3c17.8,0,32.3-14.5,32.3-32.3    S155.4,209.1,137.6,209.1z"/>
+                                    <path class="st0" d="M243.8,209.1c-17.8,0-32.3,14.5-32.3,32.3c0,17.8,14.5,32.3,32.3,32.3c17.8,0,32.3-14.5,32.3-32.3    S261.6,209.1,243.8,209.1z"/>
+                                </g>
+                            </g>
+                            </svg>Category
                         <ul class="list-group">
                             <li class="list-group-item"><a href="#">English Learning</a></li>
                             <li class="list-group-item"><a href="#">Web Development</a></li>
@@ -41,7 +118,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="">Courses<i class="fa-solid fa-chevron-down"></i></a>
+                        <a href="courses.html">Courses<i class="fa-solid fa-chevron-down"></i></a>
                         <ul class="list-group mt-3">
                             <li class="list-group-item"><a href="#">Courses</a></li>
                             <li class="list-group-item"><a href="#">Course List</a></li>
@@ -83,7 +160,10 @@
                 </div>
                 <button class="btn btn-primary mx-3">Try for free</button>
             </div>
+            
+            
         </div>
+        
     </header>
 <main>
     <section id="img">
@@ -102,33 +182,7 @@
                 
                 <div class="row tpc">
                     <div class="col-12 d-flex align-items-center justify-content-between">
-                        <!-- <div style="width: 30px; height: 30px;">
-                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-                                <style type="text/css">
-                                    
-                                    .st0{fill:none;stroke:#FFFFFF;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
-                                </style>
-                                <rect x="3" y="3" class="st0" width="7" height="7"/>
-                                <rect x="14" y="3" class="st0" width="7" height="7"/>
-                                <rect x="14" y="14" class="st0" width="7" height="7"/>
-                                <rect x="3" y="14" class="st0" width="7" height="7"/>
-                                </svg>
-                        </div>
-                        <div style="width: 36px; height: 29px;">
-                            <i class="fa-solid fa-list"></i>
-                        </div>
-                        <div>
-                            <h4>Showing 1 - 9 of 84</h4>
-                        </div>
-
-                        <div class="dropdown ">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Default</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                          </div> -->
+                       
                         <div class="category d-flex align-items-center">
                             <button class="active">
                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
@@ -187,9 +241,9 @@
                                     </div>
     
                                 </div>
-                                <div class="d-flex justify-content-between align-items-center">
+                                <div class="">
                                     <a class="card-title">Become a product Manager learn the skills & job.</a>
-                                    <p class="d-none">Communia virtutes tutiorem declarat stoicorum sanabat oblivisci nostris tamquam iucunditatem</p>
+                                    <p class="d-text d-none">Communia virtutes tutiorem declarat stoicorum sanabat oblivisci nostris tamquam iucunditatem</p>
                                 </div>
                                 <div class="d-flex  align-items-center">
                                     <div class="teachers-photo mx-2">
@@ -214,46 +268,51 @@
                     <div class="exam">
                         <!-- <a href="#"></a> -->
                         <div class="exam-photo">
-                            <img src="assets/images/course-2.jpg" alt="">
+                            <img src="assets/images/course-1.jpg" alt="">
                             <div class="job">
-                                <a href="#" style="background-color: #0fa0dd;">UX Design</a>
+                                <a href="#">Art & Design</a>
                             </div>
                         </div>
 
-                        <div class="exam-text">
-                            <div class="d-flex justify-content-between">
-                                <div class="d-flex align-items-center">
-                                    <i class="fa-solid fa-book mx-1"></i>
-                                    <span>43 Lesson</span>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>4.5 (44)</span>
-                                </div>
+                        <div class="flex-1">
 
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a class="card-title">Fundamentals of music theory Learn new</a>
-                            </div>
-                            <div class="d-flex  align-items-center">
-                                <div class="teachers-photo mx-2">
-                                    <img src="./assets/images/teacher-2.jpg" alt="">
+                            <div class="exam-text">
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fa-solid fa-book mx-1"></i>
+                                        <span>43 Lesson</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fa-solid fa-star"></i>
+                                        <span>4.5 (44)</span>
+                                    </div>
+    
                                 </div>
-                                <span>Barry Tone</span>
+                                <div class="">
+                                    <a class="card-title">Become a product Manager learn the skills & job.</a>
+                                    <p class="d-text d-none">Communia virtutes tutiorem declarat stoicorum sanabat oblivisci nostris tamquam iucunditatem</p>
+                                </div>
+                                <div class="d-flex  align-items-center">
+                                    <div class="teachers-photo mx-2">
+                                        <img src="./assets/images/teacher-1.jpg" alt="">
+                                    </div>
+                                    <span>Jim Séchen</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="price mt-2 d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center"> 
-                                <span class="prc" style="color: #0fa0dd;">$21.00</span>
-                                <span><del>$33.00</del></span>
+                            <div class="price mt-2 d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center"> 
+                                    <span class="prc">$21.00</span>
+                                    <span><del>$33.00</del></span>
+                                </div>
+                                <div class="detail">
+                                    <span>Know Details</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+    
                             </div>
-                            <div class="detail">
-                                <span>Know Details</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-
                         </div>
                     </div>
+                   
                     <div class="exam">
                         <!-- <a href="#"></a> -->
                         <div class="exam-photo">
